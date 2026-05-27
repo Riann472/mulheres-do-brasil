@@ -42,7 +42,7 @@ export function Home() {
   }, [students, hasData])
 
   const statCards = [
-    { value: stats ? String(stats.total) : '—', label: 'Alunas cadastradas', icon: '👩' },
+    { value: stats ? String(stats.total) : '—', label: 'Alunos cadastradas', icon: '👩' },
     { value: stats ? String(stats.areas) : '—', label: 'Áreas de formação', icon: '📚' },
     { value: stats ? String(stats.bairros) : '—', label: 'Bairros atendidos', icon: '📍' },
     { value: stats ? `${stats.taxa}%` : '—', label: 'Taxa de conclusão', icon: '🎓' },
@@ -181,7 +181,7 @@ export function Home() {
                 <div className="flex items-start justify-between mb-3">
                   <span className="text-3xl">{area.icone}</span>
                   {area.count !== null && (
-                    <span className="text-xs font-bold opacity-60">{area.count} alunas</span>
+                    <span className="text-xs font-bold opacity-60">{area.count} alunos</span>
                   )}
                 </div>
                 <h3 className="font-bold text-base mb-1">{area.nome}</h3>
