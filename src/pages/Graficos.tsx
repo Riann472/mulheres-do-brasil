@@ -252,7 +252,7 @@ export function Graficos() {
             <ResponsiveContainer width="100%" height={240}>
               <PieChart>
                 <Pie data={sexoData} cx="50%" cy="50%" outerRadius={90} paddingAngle={3} dataKey="value"
-                  label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`} labelLine={false}>
+                  label={({ name, percent }) => `${name} ${((percent ?? 0) * 100).toFixed(0)}%`} labelLine={false}>
                   {sexoData.map((_, i) => <Cell key={i} fill={PALETTE[i % PALETTE.length]} />)}
                 </Pie>
                 <Tooltip content={<Tip />} />
@@ -317,7 +317,7 @@ export function Graficos() {
             <ResponsiveContainer width="100%" height={260}>
               <PieChart>
                 <Pie data={empregoData} cx="50%" cy="50%" outerRadius={100} paddingAngle={3} dataKey="value"
-                  label={({ name, percent }) => `${name} (${(percent*100).toFixed(0)}%)`} labelLine={{ strokeWidth: 1 }}>
+                  label={({ name, percent }) => `${name} (${((percent ?? 0)*100).toFixed(0)}%)`} labelLine={{ strokeWidth: 1 }}>
                   {empregoData.map((_, i) => <Cell key={i} fill={[ROSE,'#10b981'][i % 2]} />)}
                 </Pie>
                 <Tooltip content={<Tip />} />

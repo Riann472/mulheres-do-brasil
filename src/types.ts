@@ -51,6 +51,12 @@ export interface StudentRow {
 
 export type Row = Record<string, string | number | boolean | null>
 
+export interface SheetData {
+  name: string
+  columns: string[]
+  rows: Row[]
+}
+
 export interface FilterState {
   globalSearch: string
   columnFilters: Record<string, string>
